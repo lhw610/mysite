@@ -1,0 +1,135 @@
+{% extends "layout.html" %}
+{% block content %}
+<header class="profile-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="profile-img" >
+                    <img src="{{ url_for('static', filename='images/profile_pic.png') }}" class="img-responsive" style="vertical-align:middle;margin:10px 0px">
+                    <ul class="social-icon">
+                        <li>
+                            <a href="https://www.linkedin.com/in/hyeon-woo-lee/" class="fa-brands fa-linkedin" target="_blank"></a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/lhw610" class="fa-brands fa-github" target="_blank"></a>
+                        </li>
+                        <li>
+                            <a href="https://scholar.google.com/citations?user=HFfD5DQAAAAJ&hl=en" class="ai ai-google-scholar-square ai-3x" target="_blank"></a>
+                        </li>
+                        <li>
+                            <a href="mailto:hyeonwoo610@gmail.com" class="fa fa-envelope" target="_blank"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="name-wrapper">
+                    <h1>Hyeonwoo Lee</h1>
+                    <span>Machine Learning Engineer</span>
+                </div>
+                <p> 
+                    I have expertise in research, application, and libraries of computer vision and deep learning.
+                    My current focus is on applying machine learning/deep learning algorithms for healthcare applications. 
+                    I have developed detection, segmentation, classification, registration, and generative models for various modalities including MR, ultrasound, and microscopic images. 
+                    I am passionate about expanding my knowledge in personal healthcare and machine learning software development. 
+                    <br>
+                    <a href="{{ url_for('static', filename='assets/Resume_HL.pdf') }}" target="_blank">Donwload Resume</a>
+                </p>
+                <div class="row row-cols-2">
+                    <div class="col-md-5">
+                        <div class="personal-details-1">
+                            <strong style="color: #444444";>Current Position</strong>
+                            <i class="fa-solid fa-briefcase"></i>
+                            <small>Research Data Scientist </small>
+                            <br>
+                            <span> Philips Research</span>
+                            <br>
+                            <span>Ultrasound AI group</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="personal-details-2">
+                            <strong style="color: #444444";>Education</strong>
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <small>Master in Biomedical Engineering, 2019 </small>
+                            <br>
+                            <span> Cornell University </span>
+                            <br>
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <small>Bachelor in Biomedical Engineering, 2017 </small>
+                            <br>
+                            <span> University of Rochester </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<header class="profile-header-contents">
+    <div class="container">
+        <div class="row">
+            <h3>Professional Experiences</h3>
+            <div class="col-md-12">
+                <p>
+                    <span class="job-date">July 2019 - Current</span>
+                    <b>Research Data Scientist</b>  
+                    <span> 
+                        Philips, 
+                        <a href="https://www.philips.com/a-w/about/innovation/research.html" target="_blank">
+                            Philips Resarch</a><!--
+                        -->, Ultrasound AI group
+                    </span>
+                </p>
+                <ul>
+                    <li>Development and application of machine/deep learning algorithms to biomedical and physiological data</li>
+                    <li>Leading deep learning algorithm development for FAST ultrasound exam on mobile ultrasound system: 
+                        <a href="https://www.usa.philips.com/healthcare/sites/lumify-handheld-ultrasound" target="_blank" class="bullet_link">Lumify</a></li>
+                </ul>
+                <p> 
+                    <span class="job-date">July 2018 - July 2019</span>
+                    <b>Scientific Data Engineer</b> 
+                    <span> Allen Institute for Cell Science, Image-based Assay Development team</span>
+                </p> 
+                <ul>
+                    <li>Developed computer vision open source toolkit for microscopic cell images, 
+                        <a href="https://www.allencell.org/segmenter.html" target="_blank" class="bullet_link">Allen Cell Structural Segmenter</a>
+                    </li>
+                    <li>
+                        Researched & Developed deep learning based object detection, segmentation and gernative models
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+<section class= "recent-update">
+    <div class="container">
+        <h3>Recent Updates</h3>
+        <div class="row">
+            <div class="col-md-12">
+                {% set ns = namespace(c = 0) %}
+                {% for date, event in recent_updates.items() %}
+                    {% if ns.c==0 %}
+                        {% set cls = "update1" %}
+                        {% set ns.c = 1 %}
+                    {% else %}
+                        {% set cls = "update2" %}
+                        {% set ns.c = 0 %}  
+                    {% endif %}
+                    <p class="{{ cls }}">
+                        <span class="event-date">&ensp;{{ date }}</span>
+                        {% if event|length==1 %}
+                            <span>{{ event[0] }}</span>
+                        {% elif  event|length==3%}
+                            <span>{{ event[0] }}<a href="{{ event[2] }}" target="_blank">{{ event[1] }}</a></span>
+                        {% else %}
+                            <span>{{ event[0] }}<a href="{{ event[2] }}" target="_blank">{{ event[1] }}</a>{{ event[3] }}</span>
+                        {% endif %}
+                    </p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

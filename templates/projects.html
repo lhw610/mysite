@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <section class="page-main">
+                <h1>Projects</h1>
+                <p>
+                    Checkout my <a href="https://github.com/lhw610">GitHub</a> for code of selected projects
+                </p>
+            </section>
+        </div>
+    </div>
+    <div class="row">
+        <section class="project-sections">
+            <div class="col-md-12">
+                <h4>Allen Cell Structural Segmenter</h4>
+                <ul>
+                    <li>
+                        <span>
+                            Allen Institute for Cell Science <br>
+                            Python-based open source toolkit developed at the Allen Insttitue for Cell Science for 3D segmentation of intracellular structures in fluorescence microscopic image.
+                        </span>
+                    </li>
+                    <li>
+                        <a href="https://www.allencell.org/segmenter.html">Allen Cell Structural Segmenter</a> is powerful tool that can generate and curate training dataset, train deep learning model, and segment structures with trained model. 
+                        Multiple modules and networks that I worked on are integrated into this open source toolkit. 
+                        I developed and packaged deep learning-based cell pair detector by implementing Faster-RCNN. 
+                        Furthermore, with spatial data augmentation and variant form of DeeplabV3+, I developed a deep learning based 2D segmentation tool for the highly complex shaped cell structures.
+                        This framework is very versatile and can be applied to various types of cell detection tasks. It is now available in AWS and Napari as plug-in.
+                    </li>
+                </ul>
+                <img src="{{ url_for('static', filename='images/segmenter.png') }}" id="segmenter">
+            </div>
+            <hr>
+            <div class="col-md-12">
+                <h4>3D Brain Segmentation with Multi-Atlas Segmentation</h4>
+                <ul>
+                    <li>
+                        <span>
+                            Sabuncu Lab, Cornell University <br>
+                            Proposed and implemented 3D segmentaiton algorithm using multi-atlas segmentation with sermi-supervised registration with brain MR image dataset. 
+                        </span>
+                    </li>
+                    <li>
+                        Supervised by <a href="https://sabuncu.engineering.cornell.edu">Dr.Mert Sabuncu</a> and <a href="https://www.mit.edu/~adalca/">Dr.Adrian Dalca</a>. 
+                        We tackled biomedical image segmentation in the scenario of only a few labeled brain MR images exist. 
+                        We proposed a straightforward implementation of efficient semi-supervised learning-based registration method, which we showcase in a multi-atlas segmentation framework (<a href="https://github.com/voxelmorph/voxelmorph">Voxelmorph</a>). 
+                        Second, through an extensive empirical study, we evaluate the performance of a supervised segmentation approach, where the training images are augmented via random deformations.
+                        I have implemented supervised segmentation model with U-Net using Tensorflow framework (<a href="https://github.com/lhw610/3D_UNet_Segmentation">repo</a>).
+                        Surprisingly, we find that in both paradigms, accurate segmentation is generally possible even in the context of few labeled images.
+                    </li>
+                </ul>
+                <img src="{{ url_for('static', filename='images/semi-supervised-segmentation.jpg') }}" id="semi-supervised-segmentation">
+            </div>
+        </section>
+    </div>            
+</div>
+{% endblock content %}

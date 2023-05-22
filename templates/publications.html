@@ -1,0 +1,89 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <section class="page-main">
+                <h1>Publications</h1>
+                <p>
+                    Please find my <a href="https://scholar.google.com/citations?user=HFfD5DQAAAAJ&hl=en">google scholar</a> page for citations.
+                </p>
+            </section>
+        </div>
+    </div>
+    <div class="row">
+        <section class="publication-sections">
+            <div class="col-md-12">
+                <h4>Peer Reviewed Jornal Publications</h4>
+                <ul>
+                    <li>
+                        <span>Cell states beyond transcriptomics: integrating structural organization and gene expression in hiPSC-derived cardiomyocytes</span><br>
+                        K.A. Gerbin, T. Grancharova, R. M. Donovan-Maiye, M.C. Hendershott, … , <b>H. Lee</b>, et al <br>
+                        <b>Cell Systems</b> Volume 12. Issue 6. pp 680-687. 2021 <br>
+                        [<a href="https://www.sciencedirect.com/science/article/pii/S2405471221001563">paper</a>]
+                    </li>
+                </ul>
+                   
+                <h4>Peer Reviewed Workshop Publications</h4>
+                <ul>
+                    <li>
+                        <span>Few Labeled Atlases are Necessary for Deep-Learning-Based Segmentation</span><br>
+                        <b>H.W. Lee</b>, M. R. Sabuncu, and A. V. Dalca<br>
+                        <b>NeurIPS ML4H</b>: Machine Learning for Health (2019) [Acc. rate: 26.1%] <br>
+                        [<a href="https://arxiv.org/abs/1908.04466">arXiv preprint</a> | 
+                        <a href="https://ml4health.github.io/2019/pages/extended-abstracts.html">extended abstract</a> | 
+                        <a href="{{ url_for('static', filename='assets/Neurips_poster.pdf') }}">poster</a>]
+                    </li>
+                </ul>
+
+                <h4>Preprints</h4>
+                <ul>
+                    <li>
+                        <span>The Allen Cell and Structure Segmenter: a new open source toolkit for segmenting 3D intracellular structures in fluorescence microscopy images</span><br>
+                        J. Chen, L. Ding, M. P. Viana <b>H. Lee</b>, et al<br>
+                        bioRxiv 2020 <br>
+                        [<a href="https://www.biorxiv.org/content/10.1101/491035v2">bioRxiv preprint</a>]
+                    </li>
+                </ul>
+
+
+                <h4>CONFERENCE ABSTRACTS</h4>
+                <ul>
+                    <li>
+                        <span>Development of a real time organ feature detection to enhance learning and completeness of abdominal FAST exam</span><br>
+                        N.Schnittke, <b>H. Lee</b>, C. Gregory, B. Hicks, et all<br>
+                        <b>SAEM:</b> Society of Academic Emergency Medicine, May 2023<br>
+                        [<span class="publication-highlight">Oral Presentation</span>]
+                    </li>
+                    <li>
+                        <span>Automated ultrasound methods for cerebral blood flow velocity measurement in point-of-care settings</span><br>
+                        J. Fincke, J. Sutton, S. Kyne, R. S. Naidu, <b>H. Lee</b>, T. Heldt, B. I. Raju<br>
+                        <b>ICP:</b> International Symposium on Intracranial pressure and Brain Monitoring, Cape Town, South Africa, 2022<br>
+                        [<span class="publication-highlight">Oral Presentation</span>]
+                    </li>
+                    <li>
+                        <span>Artificial Intelligence model to identify organ features for guiding FAST ultrasound exam</span><br>
+                        <b>H. Lee</b> N. Schnittke, J. Fincke, et all<br>
+                        <b>ACEP:</b> American College of Emergency Physicians, Annals of Emergency Medicine 80.4 (2022): S19<br>
+                        [<span class="publication-highlight">Oral Presentation</span> | 
+                        <a href="https://www.annemergmed.com/article/S0196-0644(22)00649-7/fulltext">abstract</a>]
+                    </li>
+                    <li>
+                        <span>AI Assistance to Acquire High-Quality FAST Exams</span><br>
+                        M. U. Ghani, <b>H. Lee</b>, J. Fincke, G. Ghoshal, M. Zahiri, et all<br>
+                        <b>MHSRS:</b> Military Health System Research Symposium, September 2022<br>
+                        [<a href="{{ url_for('static', filename='assets/MHSRS-2022-poster_IQ_Final.pdf') }}">poster</a>]
+                    </li>
+                    <li>
+                        <span>Automated ultrasound methods for cerebral blood flow velocity measurement in point-of-care settings</span><br>
+                        J. Fincke, J. Sutton, S. Kyne, R. S. Naidu, <b>H. Lee</b>, T. Heldt, B. I. Raju<br>
+                        <b>POCUS:</b> Point of Care Ultrasound conference, Virtual conference, April 13, 2021<br>
+                        [<span class="publication-highlight">Oral Presentation</span>]
+                    </li>
+                </ul>
+
+            </div>
+        </section>
+    </div>
+</div>
+{% endblock content %}
