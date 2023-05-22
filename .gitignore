@@ -1,3 +1,2 @@
 # ignore all directories with the name test
 venv/
-.env
