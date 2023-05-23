@@ -4,6 +4,7 @@ app = Flask(__name__)
 # update the recent activities. The dictionary has list as value
 # [event, word to put hyper link, hyperlink, optional next setnece]
 recent_updates = {
+    'May 2023': ['Our two-stage feature detection for FAST exam gudiance is accepted to IEEE IUS'],
     'May 2023': ['AI-based FAST Exam guidance was presented at Society for Academic Emergency Medicine (SAEM)'],
     'Dec 2022': ['Our work in automoated cerebral vessel detection is presented at International Symposium on Intracranial pressure and Brain Monitoring (ICP)'],
     'Oct 2022': ['Presented ','AI-based organ detection in ultrasound FAST exam', 'https://www.annemergmed.com/article/S0196-0644(22)00649-7/fulltext', 'at American College of Emergency Physicians (ACEP)'],
