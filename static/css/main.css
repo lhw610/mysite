@@ -43,8 +43,8 @@ ul {
 .site-header .navbar-nav .nav-link {
     color: #cbd5db;
     margin: 0;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
     padding-left: 1rem;
     font-size: 22px;
   }
