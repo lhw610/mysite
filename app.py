@@ -13,7 +13,7 @@ recent_updates = {
     'June 2021': ['Co-authored research by developing cardiomyocytes segmentation model, ', "Cell states beyond transcriptomic","https://www.sciencedirect.com/science/article/pii/S2405471221001563", ' is publisehd to Cell Systems'],
     'Apr 2021': ['Our work in Automated ultrasound methods for cerebral blood flow velocity measurement is presented at Point of Care Ultrasound conference'],
     'Dec 2020': ['Allen Cell and Structure Segmenter is published to ','bioRxiv','https://www.biorxiv.org/content/10.1101/491035v2'],
-    'July 2020': ['Started working as Assocaite Scientist at Ultrasound Application Group, Precision Diagnosis and Image-Guided Therapy, Philips Research'],
+    'July 2020': ['Started working as Assocaite Data Scientist at Ultrasound Application Group, Precision Diagnosis and Image-Guided Therapy, Philips Research'],
     'Dec 2019': ["Check out my Master's research on " ,'Semi-Supervised Brain MR Image Segmentation','https://arxiv.org/abs/1908.04466',' at Neurips 2019 ML4H'],
     'July 2019': ['Started my professional career as Scientific Data Engineer at Allen Institute!'],
     'May 2019': ['Graduated from Cornell University with Master in Biomedical Engineering'],
