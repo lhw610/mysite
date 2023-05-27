@@ -175,7 +175,7 @@ ul {
 .profile-header-contents li{
   list-style-type: circle;
   font-size : 16px;
-  margin-left: 15rem;
+  margin-left: 2rem;
 }
 
 .profile-header-contents a{
@@ -194,6 +194,11 @@ ul {
   font-size : 18px;
 }
 
+.profile-header-contents b{
+  font-size : 18px;
+  margin-right: 5px;
+}
+
 .profile-header-contents .job-date{
   display: inline-block;
   width: 13rem;
@@ -210,22 +215,26 @@ ul {
 }
 
 .recent-update .update1{
-  line-height : 3;
   margin: 0;
   padding: 0;
 }
 
 .recent-update .update2{
-  line-height : 3;
   background-color:  #e9e1e1;
   margin: 0;
   padding: 0;
 }
 
 .recent-update .event-date{
-  padding-left: 5px;
+  line-height : 3;
+  padding-left: 8px;
   display: inline-block;
-  width: 7.5rem;
+}
+
+.recent-update .event{
+  /* padding-left: 5px; */
+  line-height : 3;
+  display: inline-block;
 }
 
 .recent-update a{

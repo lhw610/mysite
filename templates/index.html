@@ -72,33 +72,45 @@
             <h3>Professional Experiences</h3>
             <div class="col-md-12">
                 <p>
-                    <span class="job-date">July 2019 - Current</span>
-                    <b>Research Data Scientist</b>  
-                    <span> 
-                        Philips, 
-                        <a href="https://www.philips.com/a-w/about/innovation/research.html" target="_blank">
-                            Philips Resarch</a><!--
-                        -->, Ultrasound AI group
-                    </span>
+                    <div class="row row-cols-2">
+                        <div class="col-md-2">
+                            <span class="job-date">July 2019 - Current</span>
+                        </div>
+                        <div class="col-md-9">
+                            <b>Research Data Scientist</b>  
+                            <span> 
+                                Philips, 
+                                <a href="https://www.philips.com/a-w/about/innovation/research.html" target="_blank">
+                                    Philips Resarch</a><!--
+                                -->, Ultrasound AI group
+                            </span>
+                            <ul>
+                                <li>Development and application of machine/deep learning algorithms to biomedical and physiological data</li>
+                                <li>Leading deep learning algorithm development for FAST ultrasound exam on mobile ultrasound system: 
+                                    <a href="https://www.usa.philips.com/healthcare/sites/lumify-handheld-ultrasound" target="_blank" class="bullet_link">Lumify</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </p>
-                <ul>
-                    <li>Development and application of machine/deep learning algorithms to biomedical and physiological data</li>
-                    <li>Leading deep learning algorithm development for FAST ultrasound exam on mobile ultrasound system: 
-                        <a href="https://www.usa.philips.com/healthcare/sites/lumify-handheld-ultrasound" target="_blank" class="bullet_link">Lumify</a></li>
-                </ul>
-                <p> 
-                    <span class="job-date">July 2018 - July 2019</span>
-                    <b>Scientific Data Engineer</b> 
-                    <span> Allen Institute for Cell Science, Image-based Assay Development team</span>
-                </p> 
-                <ul>
-                    <li>Developed computer vision open source toolkit for microscopic cell images, 
-                        <a href="https://www.allencell.org/segmenter.html" target="_blank" class="bullet_link">Allen Cell Structural Segmenter</a>
-                    </li>
-                    <li>
-                        Researched & Developed deep learning based object detection, segmentation and gernative models
-                    </li>
-                </ul>
+                <p>
+                    <div class="row row-cols-2">
+                        <div class="col-md-2">
+                            <span class="job-date">July 2018 - July 2019</span>
+                        </div>
+                        <div class="col-md-9">
+                            <b>Scientific Data Engineer</b> 
+                            <span> Allen Institute for Cell Science, Image-based Assay Development team</span>
+                            <ul>
+                                <li>Developed computer vision open source toolkit for microscopic cell images, 
+                                    <a href="https://www.allencell.org/segmenter.html" target="_blank" class="bullet_link">Allen Cell Structural Segmenter</a>
+                                </li>
+                                <li>
+                                    Researched & Developed deep learning based object detection, segmentation and gernative models
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </p>
             </div>
         </div>
     </div>
@@ -106,30 +118,36 @@
 <section class= "recent-update">
     <div class="container">
         <h3>Recent Updates</h3>
-        <div class="row">
-            <div class="col-md-12">
-                {% set ns = namespace(c = 0) %}
-                {% for date, event in recent_updates.items() %}
-                    {% if ns.c==0 %}
-                        {% set cls = "update1" %}
-                        {% set ns.c = 1 %}
-                    {% else %}
-                        {% set cls = "update2" %}
-                        {% set ns.c = 0 %}  
-                    {% endif %}
-                    <p class="{{ cls }}">
-                        <span class="event-date">&ensp;{{ date }}</span>
-                        {% if event|length==1 %}
-                            <span>{{ event[0] }}</span>
-                        {% elif  event|length==3%}
-                            <span>{{ event[0] }}<a href="{{ event[2] }}" target="_blank">{{ event[1] }}</a></span>
-                        {% else %}
-                            <span>{{ event[0] }}<a href="{{ event[2] }}" target="_blank">{{ event[1] }}</a>{{ event[3] }}</span>
-                        {% endif %}
-                    </p>
-                {% endfor %}
+        {% set ns = namespace(c = 0) %}
+        {% for date, event in recent_updates.items() %}
+            {% if ns.c==0 %}
+                {% set cls = "update1" %}
+                {% set ns.c = 1 %}
+            {% else %}
+                {% set cls = "update2" %}
+                {% set ns.c = 0 %}  
+            {% endif %}
+            <div class="{{ cls }}">
+                <div class="col-md-12">
+                    <div class="row row-cols-2">
+                        <div class="col-md-1 d-flex align-items-center justify-content-center">
+                            <div class="event-date">{{ date }}</div>
+                        </div>
+                        <div class="col-md-11">
+                            <div class="event">
+                                {% if event|length==1 %}
+                                {{ event[0] }}
+                                {% elif  event|length==3%}
+                                    {{ event[0] }}<a href="{{ event[2] }}" target="_blank">{{ event[1] }}</a>
+                                {% else %}
+                                    {{ event[0] }}<a href="{{ event[2] }}" target="_blank">{{ event[1] }}</a>{{ event[3] }}
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        {% endfor %}
     </div>
 </section>
 {% endblock content %}
