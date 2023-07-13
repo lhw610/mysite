@@ -112,11 +112,27 @@ ul {
   line-height : 1;
 }
 
+@media (max-width: 767px){
+  .profile-header .personal-details-1 small, .profile-header .personal-details-2 small {
+    font-size : 16px;
+    line-height : 1;
+  }
+}
+
 .profile-header .personal-details-1 span {
   font-size : 16px;
   margin-left: 20px;
   line-height : 1;
   color: #918a8a;
+}
+
+@media (max-width: 767px){
+  .profile-header .personal-details-1 span {
+    font-size : 14px;
+    margin-left: 20px;
+    line-height : 1;
+    color: #918a8a;
+  }
 }
 
 .profile-header .personal-details-2 span {
@@ -125,6 +141,16 @@ ul {
   margin-left: 25px;
   line-height : 1;
   color: #918a8a;
+}
+
+@media (max-width: 767px){
+  .profile-header .personal-details-2 span {
+    font-size : 16px;
+    margin-bottom: 3cm;
+    margin-left: 25px;
+    line-height : 1;
+    color: #918a8a;
+  }
 }
 
 .profile-header .personal-details-1 i, .profile-header .personal-details-2 i {
@@ -176,6 +202,10 @@ ul {
   list-style-type: circle;
   font-size : 16px;
   margin-left: 2rem;
+}
+
+.profile-header-contents ul{
+  margin-bottom: 1rem;
 }
 
 .profile-header-contents a{
