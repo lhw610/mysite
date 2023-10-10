@@ -33,4 +33,4 @@ def publications():
     return render_template('publications.html', title='publications')
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
